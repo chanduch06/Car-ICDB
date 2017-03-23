@@ -3,30 +3,16 @@ Database, which is a database of cars exposed through a REST API.
 
 The API is currently able to create and list cars using JSON representations.
 
-## Setup
 
-To install the dependencies, run:
-    python setup.py install
+we have to run following to install dependencies:
+python setup.py install
 
-Then, create the sqlite database and load sample data:
+Then, we have to create the sqlite database and load the sample data:
     python manage.py syncdb
+    python manage.py makemigrations
+    python manage.py migrate
     python manage.py loaddata sample_cars
 
 Running tests:
     python manage.py test
 
-## Goals
-
-To complete this evaluation, you need to:
-
-* Add functionality for updating a car through the REST API by sending a JSON
-  representation.
-* Add functionality for deleting a car through the REST API.
-* Add functionality for viewing a JSON representation of a single car.
-
-## Bonus
-
-For bonus points:
-
-* Write unit tests, ideally before the code itself.
-* Rewrite views as class-based views. Even better: use built-in generic views.
